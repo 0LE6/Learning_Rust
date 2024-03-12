@@ -4,11 +4,17 @@ pub mod basic_exercises {
         let num = 69;
         println!("Printing the integer variable --> {}", num)
     }
+
+    pub fn variables2() {
+        let num: i32;
+        println!("printing number with i32 {}", num)
+    }
 }
 
 
 fn main() {
     // module practice
-    // every model has different exercises 
-    basic_exercises::variables();
+    // every module has different exercises 
+    //basic_exercises::variables();
+    basic_exercises::variables2();
 }
