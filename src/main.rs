@@ -6,8 +6,8 @@ pub mod basic_exercises {
     }
 
     pub fn variables2() {
-        let num: i32;
-        println!("printing number with i32 {}", num)
+        let num: i32 = 420;
+        println!("printing number with i32 ==> {}", num)
     }
 }
 
