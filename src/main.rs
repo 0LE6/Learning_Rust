@@ -11,7 +11,8 @@ pub mod basic_exercises {
     }
 
     pub fn variables3() {
-        let string: str = "varibale";
+        // https://doc.rust-lang.org/rust-by-example/std/str.html#strings
+        let string = String::from("heap alloc a variable string");
         println!("printing a declared variable as a string -> {}", string);
     }
 }
