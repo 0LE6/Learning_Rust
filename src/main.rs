@@ -12,7 +12,11 @@ pub mod basic_exercises {
 
     pub fn variables3() {
         // https://doc.rust-lang.org/rust-by-example/std/str.html#strings
-        let string = String::from("heap alloc a variable string");
+        let mut string = String::from("heap alloc a variable string");
+        // this kind of string is mutable (?)
+        //string.push_str(" --- this is a concat --- "); // this is not mutable if the string
+        // variable doesn't have a mut
+        string.push_str(" --- this is a concat --- ");
         println!("printing a declared variable as a string -> {}", string);
     }
 }
