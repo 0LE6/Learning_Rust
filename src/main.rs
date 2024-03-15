@@ -18,6 +18,8 @@ pub mod basic_exercises {
         // variable doesn't have a mut
         string.push_str(" --- this is a concat --- ");
         println!("printing a declared variable as a string -> {}", string);
+        let inmutable_string: &str = "this is an inmutable string";
+        println!("\ninmutable string --> {}", inmutable_string);
     }
 }
 
