@@ -1,4 +1,6 @@
 pub mod basic_exercises {
+    use std::fmt;
+
     pub fn variables() {
         // practice basic variables in Rust
         let num = 69;
@@ -31,7 +33,7 @@ pub mod basic_exercises {
         println!("Our PI const multiple by the float_without_type_specification -> {}", float_without_type_specification * CONST_EXAMPLE);  
 
         // this gaves error beacause you can't multiply a f64 by f32
-        let float_with_type_specification: f32 = 2.0;
+        let _float_with_type_specification: f32 = 2.0;
         //println!("\nOur PI const multiply by the float_with_type_specification {}", float_with_type_specification * CONST_EXAMPLE);
 
         let mut boolean_var: bool = false;
@@ -44,6 +46,23 @@ pub mod basic_exercises {
         }
 
     }
+
+    pub fn formatting() {
+        struct Coordinates {
+            x: i32,
+            y: i32,
+        }
+        
+        // to format a struct lol
+        impl fmt::Display for Coordinates {
+            fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+                 write!(f, "({}, {})", self.x, self.y)
+            }
+        }
+
+        let my_struct = Coordinates { x: 10, y: 20};
+        print!("My struct of coordinates -> {}", my_struct);
+    }
 }
 
 
@@ -53,6 +72,7 @@ fn main() {
     //basic_exercises::variables();
     //basic_exercises::variables2();
     //basic_exercises::variables3();
-    basic_exercises::variables4();
+    //basic_exercises::variables4();
+    basic_exercises::formatting();
 }
 
