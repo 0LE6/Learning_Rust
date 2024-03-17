@@ -77,6 +77,11 @@ pub mod basic_exercises {
             }
 
          */
+
+        println!("\nWithout format --> {}", 3.141592);
+        println!("With format --> :.2 (two decimals) {:.2}", 3.141592);
+
+        println!("\nFormat: filling with 0 until beaing a 5 digit output --> :05 {:05}", 42);
     }
 }
 
