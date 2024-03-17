@@ -62,6 +62,21 @@ pub mod basic_exercises {
 
         let my_struct = Coordinates { x: 10, y: 20};
         print!("My struct of coordinates -> {}", my_struct);
+
+        /* example with debug
+    
+            #[derive(Debug)]
+            struct Coordinates {
+                x: i32,
+                y: i32,
+            }
+
+            fn main() {
+                let my_struct = Coordinates { x: 10, y: 20 };
+                println!("My struct of coordinates -> {:?}", my_struct);
+            }
+
+         */
     }
 }
 
