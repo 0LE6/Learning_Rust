@@ -24,7 +24,22 @@ fn main() {
     if let Some(last) = vector.pop() {
         println!("Pushing a 0 to our vector --> {:?}", vector);
         println!("The last element to pop was --> {}", last);
-    } // removing the last value and showing it
+    } // removing the last value and showing it with .pop()
 
+    // .contains()
+    if vector.contains(&69) {
+        print!("The vector contains the 69.");
+    }
+    else {
+        print!("The vector does not contain the 69 already.");  
+    }
 
+    vector.insert(1,69);
+    print!("\nUsing .insert(1,69) to insert the 69 in the position 1 --> {:?}", vector);
+
+    // .len() and .clear()
+    if vector.len() >= 3 {
+        vector.clear();
+        print!("\nClearing the vectro using .clear() if vector is >= 3 --> {:?}", vector);
+    }
 }
