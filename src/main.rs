@@ -26,7 +26,7 @@ fn main() {
         println!("The last element to pop was --> {}", last);
     } // removing the last value and showing it with .pop()
 
-    // .contains()
+    .contains()
     if vector.contains(&69) {
         print!("The vector contains the 69.");
     }
