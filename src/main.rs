@@ -11,7 +11,8 @@ fn main() {
 
     //basic_exercises::formatting::formatting();
     //basic_exercises::variables::variables4();
-    
+   
+    /*
     let mut vector = basic_exercises::vectors::vectors();
     println!("My initial Vector created in vectors.rs --> {:?}", vector);
     
@@ -41,5 +42,16 @@ fn main() {
     if vector.len() >= 3 {
         vector.clear();
         print!("\nClearing the vectro using .clear() if vector is >= 3 --> {:?}", vector);
+    }
+    */ 
+
+    let my_array = basic_exercises::arrays::arrays();
+
+    print!("The num in the index 0 --> {}", my_array[0]); // 1
+    print!("\nThe num in the index 3 --> {}", my_array[3]); // 3
+    
+    // now with iteration
+    for &num in my_array.iter() {
+        print!("\nNumber --> {}", num);
     }
 }
