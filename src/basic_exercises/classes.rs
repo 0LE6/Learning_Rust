@@ -1,6 +1,18 @@
+use chrono::{NaiveDate, Utc};
+
 pub struct Student {
-    pub name: String, 
-    pub surname: String, 
-    pub age: u8, // 8 bits in memory, values from 0 to 255.
-    pub grade: f32
+    name: String, 
+    surname: String, 
+    birth_date: NaiveDate, // equivalent to DateTime in C#
+    grade: f32,
+    email: String,
+    is_active: bool,
+    credits_earned: u32,
+    start_date: NaiveDate,
+    address: Address,
+    phone_number: Option<String>
 }
+
+
+
+
