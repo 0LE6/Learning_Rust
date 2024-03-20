@@ -13,6 +13,11 @@ pub struct Student {
     phone_number: Option<String>
 }
 
-
+pub struct Address {
+    street: String,
+    city: String, 
+    postal_code: u32,
+    country: String
+}
 
 
