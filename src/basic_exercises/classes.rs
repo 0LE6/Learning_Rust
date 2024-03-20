@@ -20,4 +20,9 @@ pub struct Address {
     country: String
 }
 
+impl Student {
+    // Constructor
+    pub fn new() -> {}
+}
+
 
