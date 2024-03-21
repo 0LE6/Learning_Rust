@@ -14,7 +14,8 @@ pub struct Student {
 }
 
 pub struct Address {
-    street: String,
+    street: String
+        // TODO : keep creating a similar approach to OOP in Rust,
     city: String, 
     postal_code: u32,
     country: String
