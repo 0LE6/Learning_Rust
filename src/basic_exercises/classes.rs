@@ -23,6 +23,8 @@ pub struct Address {
 impl Student {
     // Constructor
     pub fn new() -> {}
+    // rewrite
 }
 
+// TODO : keep creating a similar approach to OOP in Rust
 
