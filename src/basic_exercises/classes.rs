@@ -1,5 +1,8 @@
 use chrono::{NaiveDate, Utc};
 
+// https://doc.rust-lang.org/book/ch17-01-what-is-oo.html
+
+// pseudo class Student
 pub struct Student {
     name: String, 
     surname: String, 
@@ -13,19 +16,32 @@ pub struct Student {
     phone_number: Option<String>
 }
 
+// pseudo class Address
 pub struct Address {
     street: String
-        // TODO : keep creating a similar approach to OOP in Rust,
     city: String, 
     postal_code: u32,
     country: String
 }
 
-impl Student {
-    // Constructor
-    pub fn new() -> {}
-    // rewrite
+
+// using Default trait 
+impl Default for Student {
+    fn default() -> Self {
+        Self {
+            name: String::new(),
+            surname: String::new(),
+            birth_date: NaiveDate::from_ymd(1900,1,1),
+            grade: 0.0,
+            email: String::new(),
+            is_active: false,
+            credits_earned: 0,
+            start_date: Utc::today().naive_utc(),
+            address: Address::defauñt(), // TODO : add constructor fro the Address struct
+            phone_number: None,
+        }
+    }
 }
 
-// TODO : keep creating a similar approach to OOP in Rust
+
 
