@@ -18,7 +18,7 @@ pub struct Student {
 
 // pseudo class Address
 pub struct Address {
-    street: String
+    street: String,
     city: String, 
     postal_code: u32,
     country: String
@@ -31,17 +31,54 @@ impl Default for Student {
         Self {
             name: String::new(),
             surname: String::new(),
-            birth_date: NaiveDate::from_ymd(1900,1,1),
+            birth_date: NaiveDate::from_ymd_opt(1900,1,1),
             grade: 0.0,
             email: String::new(),
             is_active: false,
             credits_earned: 0,
-            start_date: Utc::today().naive_utc(),
-            address: Address::defauñt(), // TODO : add constructor fro the Address struct
+            start_date: Utc::now().naive_utc(),
+            address: Address::default(), 
             phone_number: None,
         }
     }
+
+    pub fn to_string(&self) -> String {
+        format!(
+            "Name: {}, Surname: {}, Birth Date: {}, Grade: {}, 
+            Email: {}, Active: {}, Credits: {}, Start Date: {}, 
+            Address: {}, Phone: {:?}",
+            self.name,
+            self.surname,
+            self.birth_date,
+            self.grade,
+            self.email,
+            self.is_active,
+            self.credits_earned,
+            self.start_date,
+            self.address.to_string(),
+            self.phone_number
+        )
+    }
 }
 
+
+impl Address {
+    // Constructor
+    pub fn new(street: String, city: String, postal_code: u32, country: String) -> Self {
+        Self {
+            street,
+            city,
+            postal_code,
+            country,
+        }
+    }
+
+    pub fn to_string(&self) -> String {
+        format!(
+            "{} {}, {} {}",
+            self.street, self.city, self.postal_code, self.country
+        )
+    }
+}
 
 

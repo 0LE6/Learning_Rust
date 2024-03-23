@@ -43,7 +43,7 @@ fn main() {
         vector.clear();
         print!("\nClearing the vectro using .clear() if vector is >= 3 --> {:?}", vector);
     }
-    */ 
+     
 
     let my_array = basic_exercises::arrays::arrays();
 
@@ -54,4 +54,13 @@ fn main() {
     for &num in my_array.iter() {
         print!("\nNumber --> {}", num);
     }
+
+    */
+    
+    let mut student = basic_exercises::classes::Student::default();
+    student.name = "Rust".to_string();
+    student.surname = "Lang".to:string();
+
+    
+    
 }
