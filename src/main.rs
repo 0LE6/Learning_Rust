@@ -1,4 +1,5 @@
 pub mod basic_exercises;
+use crate::basic_exercises::classes::Address;
 
 fn main() {
     // module practice
@@ -58,9 +59,17 @@ fn main() {
     */
     
     let mut student = basic_exercises::classes::Student::default();
-    student.name = "Rust".to_string();
-    student.surname = "Lang".to_string();
+    student.set_name("Rust".to_string());
+    student.set_surname("Lang".to_string());
 
+    let address = Address::new(
+        "123 Fake St".to_string(), 
+        "Anytown".to_string(),
+        69,
+        "Rustyland".to_string());
     
+    student.set_address(address);
+
+    println!("{}", student); 
     
 }
