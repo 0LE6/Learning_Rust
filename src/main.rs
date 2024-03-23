@@ -59,7 +59,7 @@ fn main() {
     
     let mut student = basic_exercises::classes::Student::default();
     student.name = "Rust".to_string();
-    student.surname = "Lang".to:string();
+    student.surname = "Lang".to_string();
 
     
     

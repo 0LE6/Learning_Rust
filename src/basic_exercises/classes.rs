@@ -36,12 +36,15 @@ impl Default for Student {
             email: String::new(),
             is_active: false,
             credits_earned: 0,
-            start_date: Utc::now().naive_utc(),
-            address: Address::default(), 
+            start_date: Utc::now().naive_utc().date(),
+            address: Address::new(String::new(), String::new(), 0, String::new()),
             phone_number: None,
         }
     }
+}
 
+impl Student {
+    // Implementa el método to_string() aquí, no dentro de Default
     pub fn to_string(&self) -> String {
         format!(
             "Name: {}, Surname: {}, Birth Date: {}, Grade: {}, 
@@ -59,8 +62,20 @@ impl Default for Student {
             self.phone_number
         )
     }
+
+    // Añade aquí los getters y setters
 }
 
+impl Default for Address {
+    fn default() -> Self {
+        Self {
+            street: String::new(),
+            city: String::new(),
+            postal_code: 0,
+            country: String::new(),
+        }
+    }
+}
 
 impl Address {
     // Constructor
