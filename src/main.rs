@@ -70,6 +70,7 @@ fn main() {
     
     student.set_address(address);
 
-    println!("{}", student); 
+    println!("{}", student);
     
+    // continue from here ... :)
 }
