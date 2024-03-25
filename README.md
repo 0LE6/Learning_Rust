@@ -1,1 +1,1 @@
-This is my personal Rust self learning project totally from scratch.
+My playground to learn Rust syntaxis and some basic concepts.
