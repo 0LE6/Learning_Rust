@@ -76,4 +76,7 @@ fn main() {
     // according to more professional sources of info than gpt
     // the setting and getting in rust is different, not Java-ish, some links for info:
     //  https://www.reddit.com/r/rust/comments/d7w6n7/is_it_idiomatic_to_write_setters_and_getters/
+    // f*ck, I need to continue with this... don't have time
+
+
 }
