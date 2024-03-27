@@ -78,5 +78,9 @@ fn main() {
     //  https://www.reddit.com/r/rust/comments/d7w6n7/is_it_idiomatic_to_write_setters_and_getters/
     // f*ck, I need to continue with this... don't have time
 
-
+    
+    // for loop
+    for i in 0..5 {
+        print!("\nCount --> {}", i);
+    }
 }
